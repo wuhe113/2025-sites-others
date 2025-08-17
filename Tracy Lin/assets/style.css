@@ -3,7 +3,18 @@ body{
     overflow: hidden;
     padding: 0;
     margin: 0;
-    /* cursor: none; */
+    cursor: none;
+}
+
+#cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px dashed #676767;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+    z-index: 999;
 }
 
 #left-bar{
@@ -19,16 +30,15 @@ body{
     font-weight: lighter;
     font-size: 2.5vw;
     /* font-stretch: condensed; */
-    border-right: 1px solid #676767;
-    border-right-style: dashed;
+    border-right: 1px dashed #676767;
+    /* border-right-style: dashed; */
     gap: 5vh;
 }
 
 
 #left-bar > div {
     width: 100%;
-    border-bottom: 1px solid #676767;
-    border-bottom-style: dashed;
+    border-bottom: 1px dashed #676767;
     /* padding-top: 10vh;
     padding-bottom: 10vh; */
     padding-top: 2vh;
